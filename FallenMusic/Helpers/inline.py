@@ -51,8 +51,8 @@ pm_buttons = [
     ],
     [InlineKeyboardButton(text="• اوامࢪ التشغيل •", callback_data="fallen_help")],
     [
-        InlineKeyboardButton(text="• سوࢪس الخليفه •", url=config.SUPPORT_CHANNEL),
-        InlineKeyboardButton(text="• جـروب الدعم •", url=config.SUPPORT_CHAT),
+        InlineKeyboardButton(text="• سوࢪس سبارك •", url=config.SUPPORT_CHANNEL),
+        InlineKeyboardButton(text="• التحديثات •", url=config.SUPPORT_CHAT),
     ],
     [
         InlineKeyboardButton(
@@ -71,8 +71,8 @@ gp_buttons = [
         )
     ],
     [
-        InlineKeyboardButton(text="• سوࢪس الخليفه •", url=config.SUPPORT_CHANNEL),
-        InlineKeyboardButton(text="• جࢪوب الدعم •", url=config.SUPPORT_CHAT),
+        InlineKeyboardButton(text="• سوࢪس سبارك •", url=config.SUPPORT_CHANNEL),
+        InlineKeyboardButton(text="• التحديثات •", url=config.SUPPORT_CHAT),
     ],
     [
         InlineKeyboardButton(
@@ -102,7 +102,7 @@ helpmenu = [
 
 
 help_back = [
-    [InlineKeyboardButton(text="• جࢪوب الدعم •", url=config.SUPPORT_CHAT)],
+    [InlineKeyboardButton(text="• سورس سبارك •", url=config.SUPPORT_CHAT)],
     [
         InlineKeyboardButton(text="• ࢪجوع •", callback_data="fallen_help"),
         InlineKeyboardButton(text="• مسح •", callback_data="close"),
