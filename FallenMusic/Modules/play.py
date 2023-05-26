@@ -65,7 +65,7 @@ from FallenMusic.Helpers.thumbnails import gen_qthumb, gen_thumb
     & ~filters.via_bot
 )
 async def play(_, message: Message):
-    fallen = await message.reply_text("⎊ جاري التحميل ⚡")
+    fallen = await message.reply_text("** جاري التحميل...**")
     try:
         await message.delete()
     except:
@@ -76,7 +76,7 @@ async def play(_, message: Message):
             get = await app.get_chat_member(message.chat.id, ASS_ID)
         except ChatAdminRequired:
             return await fallen.edit_text(
-                f"⎊ اديني صلاحية الاضافة علشان اضيف المساعد {BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴛᴏ {message.chat.title}."
+                f" اديني صلاحية الاضافة علشان اضيف المساعد {BOT_NAME} ᴀssɪsᴛᴀɴᴛ ᴛᴏ {message.chat.title}."
             )
         if get.status == ChatMemberStatus.BANNED:
             unban_butt = InlineKeyboardMarkup(
@@ -120,7 +120,7 @@ async def play(_, message: Message):
             await app2.join_chat(invitelink)
             await asyncio.sleep(2)
             await fallen.edit_text(
-                f"{ASS_NAME} ⎊ تم الانضمام ✅,\n\n⎊ بدء التشغيل..."
+                f"{ASS_NAME} ** تم الانضمام ✅,\n\n بدء التشغيل..."
             )
         except UserAlreadyParticipant:
             pass
@@ -178,7 +178,7 @@ async def play(_, message: Message):
     else:
         if len(message.command) < 2:
             return await fallen.edit_text("⎊ اكتب اسم الاغنية 🎧")
-        await fallen.edit_text("⎊ جارٍ التشغيل ⚡")
+        await fallen.edit_text("** جارٍ التشغيل**")
         query = message.text.split(None, 1)[1]
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
