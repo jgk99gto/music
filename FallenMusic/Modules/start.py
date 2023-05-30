@@ -31,7 +31,7 @@ from FallenMusic.Helpers import gp_buttons, pm_buttons
 from FallenMusic.Helpers.dossier import *
 
 
-@app.on_message(filters.command(["start"]) | filters.command(["الاوامر","اوامر"],prefixes= ["/", "!","","#"]) & ~filters.forwarded)
+@app.on_message(filters.command(["start"]) | filters.command(["/help","مساعده"],prefixes= ["/", "!","","#"]) & ~filters.forwarded)
 @app.on_edited_message(filters.command(["start"]) & ~filters.forwarded)
 async def fallen_st(_, message: Message):
     if message.chat.type == ChatType.PRIVATE:
